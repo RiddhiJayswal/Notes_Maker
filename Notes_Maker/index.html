@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Maker</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu_bar">
+        <div class="formatting-container">
+            <select class="font_family_input" id="fontFamily">
+                <option value="'Courier New'">Courier New</option>
+                <option value="'Franklin Gothic Medium'">Franklin Gothic Medium</option>
+                <option value="'Trebuchet MS'">Trebuchet MS</option>
+                <option value="Georgia">Georgia</option>
+            </select>
+            <select class="font_size_input" id="fontSize">
+                <option value="14">14</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="24">24</option>
+            </select>
+        </div>
+        <div class="bui_container">
+            <i class="fas fa-bold" id="boldIcon" aria-label="Bold"></i>
+            <i class="fas fa-underline" id="underlineIcon"></i>
+            <i class="fas fa-italic" id="italicIcon"></i>
+        </div>
+        <div class="alignment_container">
+            <i class="fas fa-align-left left" id="alignLeftIcon"></i>
+            <i class="fas fa-align-center center" id="alignCenterIcon"></i>
+            <i class="fas fa-align-right right" id="alignRightIcon"></i>
+        </div>
+        <div class="color-container">
+            <i class="fas fa-tint" id="textColorIcon"></i> 
+            <input type="color" class="text_color" style="display: none;" id="textColorInput">
+            <i class="fas fa-fill-drip" id="backgroundColorIcon"></i> 
+            <input type="color" class="background_color" style="display: none;" id="backgroundColorInput">
+        </div>
+        <button id="addNoteButton">Add Note</button>
+        <button id="deleteNoteButton">Delete All Notes</button>
+    </div>
+    
+    <div class="notes_container" id="gridContainer">
+        <div id="tooltip" class="tooltip" style="display: none;"></div>
+        <!-- Notes will be dynamically added here -->
+    </div>
+
+    <script src="menu.js" type="module"></script>
+    <div id="tooltip" style="display:none; position:absolute; background:#333; color:#fff; padding:5px; border-radius:5px;"></div>
+</body>
+</html>

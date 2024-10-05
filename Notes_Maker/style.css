@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+}
+
+.menu_bar {
+    height: 3.5rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color: #2d3748;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu_bar > * {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 0.5rem;
+}
+
+.formatting-container select,
+.bui_container i,
+.alignment_container i,
+.color-container i {
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.formatting-container select {
+    background-color: #1a202c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+}
+
+.formatting-container select:hover {
+    background-color: #4a5568;
+}
+
+.bui_container i:hover,
+.alignment_container i:hover,
+.color-container i:hover {
+    color: #63b3ed;
+    transform: scale(1.2);
+}
+
+button {
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-left: 0;  
+}
+
+button:hover {
+    background-color: #63b3ed;
+}
+
+/* Group buttons closer together */
+.menu_bar button {
+    margin-left: 5px;  /* Add slight margin between buttons to prevent overlap */
+}
+
+.notes_container {
+    padding: 2rem;
+}
+
+.notes_input {
+    width: 100%;
+    height: 400px;
+    font-size: 16px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border 0.3s ease;
+    overflow-y: auto;
+}
+
+.notes_input:hover,
+.notes_input:focus {
+    border-color: #3182ce;
+}
+
+.note {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.note:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.note-content {
+    width: calc(100% - 50px);
+    display: inline-block;
+    min-height: 20px; /* Ensure div is visible even if empty */
+}
+
+.deleteNoteButton {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #e53e3e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.deleteNoteButton:hover {
+    background: #c53030;
+}
+
+.selected {
+    background-color: #a28989;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(160, 158, 158);
+}
+
+.alignment_container i.selected {
+    color: #63b3ed;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .menu_bar {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .menu_bar > * {
+        margin: 0.5rem 0;
+    }
+
+    .notes_input {
+        height: 300px;
+    }
+}
+/* user-select: none; Prevent text selection */
+
+.note-container {
+    display: flex;
+    justify-content: space-between; /* Align note and button */
+    align-items: flex-start; /* Align items to the top */
+    margin: 10px 0; /* Spacing between notes */
+}
+
+.note {
+    flex: 1; /* Allow the note to take the available space */
+    padding: 8px;
+    border: 1px solid #ccc; /* Optional border */
+    border-radius: 4px; /* Optional rounded corners */
+}
+
+.delete-button {
+    margin-left: 10px; /* Space from the note */
+    cursor: pointer; /* Show pointer on hover */
+    background-color: #ff4c4c; /* Optional: Red background */
+    color: white; /* Optional: Text color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners for the button */
+}
+
+.delete-button:hover {
+    background-color: #e63939; /* Darker red on hover */
+}
+
+.pin-button {
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.pinned {
+    border: 2px solid #ffd700; /* Gold border for pinned notes */
+    background-color: #fefbd8; /* Light background for pinned notes */
+}
+
+/* Highlighted terms style */
+.highlighted {
+    background-color: yellow; /* You can choose a different color if you prefer */
+    cursor: pointer; /* Indicates that the text can be interacted with */
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+    display: none; /* Hidden by default */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    transition: opacity 0.3s; /* Smooth fade-in/out effect */
+}
+
+/* Optional: You can also add a fade effect for the tooltip */
+.tooltip.show {
+    display: block;
+    opacity: 1; /* Show the tooltip */
+}
