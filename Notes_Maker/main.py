@@ -8,7 +8,6 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 # Set up the Groq client with your API key
-os.environ["GROQ_API_KEY"] = "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"
 client = Groq(api_key=os.environ["GROQ_API_KEY"])  # Use the environment variable
 
 # Function to get the definition of a keyword from Groq
