@@ -32,7 +32,23 @@ This project is a **Custom Rich Text Editor** created from scratch without using
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   [git clone https://github.com/RiddhiJayswal/Notes_Maker.git]
+   
+2. Navigate to the project directory:
+    ```bash
+    [cd https://github.com/RiddhiJayswal/Notes_Maker.git ]
+    
+3. Create a .env file in the root of the project with the following content:
+    ```bash
+    [GROQ_API_KEY=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]
+    
+4. Install the required packages:
+    ```bash
+    [pip install -r requirements.txt]
+    
+5. Run your application:
+    ```bash
+    [python main.py]
 
 ## Screenshots
 Here are some screenshots that showcase the functionality and design of the **Custom Rich Text Editor**:
