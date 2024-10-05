@@ -1,8 +1,8 @@
-# Custom Rich Text Editor(Notes Maker)
+# Notes Maker
 
 ## Description
 <!-- Provide a detailed description of your project here -->
-This project is a **Custom Rich Text Editor** created from scratch without using pre-made libraries like TinyMCE or Quill. The editor comes with basic text formatting options and a feature to manage and pin important notes. Additionally, it includes an AI-powered auto glossary feature that highlights key terms and provides explanations on hover.
+This project is a **Notes Maker** created from scratch without using pre-made libraries like TinyMCE or Quill. The editor comes with basic text formatting options and a feature to manage and pin important notes. Additionally, it includes an AI-powered auto glossary feature that highlights key terms and provides explanations on hover.
 
 ## Features
 
