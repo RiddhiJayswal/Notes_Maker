@@ -1,4 +1,4 @@
-# Notes Maker
+.# Notes Maker
 
 ## Description
 <!-- Provide a detailed description of your project here -->
@@ -38,15 +38,11 @@ This project is a **Notes Maker** created from scratch without using pre-made li
     ```bash
     [cd https://github.com/RiddhiJayswal/Notes_Maker.git ]
     
-3. Create a .env file in the root of the project with the following content:
-    ```bash
-    [GROQ_API_KEY=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]
-    
-4. Install the required packages:
-    ```bash
-    [pip install -r requirements.txt]
-    
-5. Run your application:
+3. Replace GROQ_API_KEY with your GROQ_API_PRIVATE_KEY
+   ```bash
+    [GROQ_API_KEY=GROQ_API_PRIVATE_KEY]
+       
+4. Run your application:
     ```bash
     [python main.py]
 
