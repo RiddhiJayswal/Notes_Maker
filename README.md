@@ -1,4 +1,4 @@
-.# Notes Maker
+# Notes Maker
 
 ## Description
 <!-- Provide a detailed description of your project here -->
